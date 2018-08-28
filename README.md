@@ -74,6 +74,19 @@ printMessage="Hello from Bourne";
 echo printMessage
 ```
 
+- Variable name, "=" and value should not have space between them. This is because after space, shell see everything as a parameter.
+
+- You can't assign multiple values to a variable, so without quote, printMessage won't have have the same value, and it might throw errors.
+
+`2.1.0.sh`
+```Bash
+#!/bin/sh
+
+
+```
+
+
+
 ### Gate 3: name
 
 ## Contribution
@@ -81,4 +94,4 @@ echo printMessage
 
 ## Resources
 - [Shell Scripting](https://en.wikipedia.org/wiki/Shell_script)
-- [shellscript.sh/](https://www.shellscript.sh/)
+- [shellscript.sh](https://www.shellscript.sh/)
