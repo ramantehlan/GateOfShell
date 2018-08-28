@@ -47,6 +47,13 @@ To run a shell script you need to have following prerequisites:
 
 ### Gate 1: Basics
 
+`intro.sh`
+```Bash
+	#!/bin/sh
+
+	# Comments start with a hash code 
+```
+
 ### Gate 2: Variables
 
 ### Gate 3: name
