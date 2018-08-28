@@ -47,16 +47,32 @@ To run a shell script you need to have following prerequisites:
 
 ### Gate 1: Basics
 
-`intro.sh`
+`1.0.0.sh`
 ```Bash
-	#!/bin/sh
+#!/bin/sh
 
-	# Comments start with a hash code 
+# Comments start with a hash code 
 
-	echo "Welcome to GateOfShell" # You can even have inline comments 
+echo Welcome to GateOfShell # You can even have in-line comments 
 ```
 
+- `#!/bin/sh` is to tell the location where the script needs to be executed, it is a standard location for a Bourne shell.
+
+- `#` is to make a comment in script. Also note, #! is the only exception. 
+
+- `echo` is a command, running here with three parameters: "Welcome", "to", "GateOfShell". Also note, since we are passing three parameters, it won't count space between them, to add spaces, you must use double quotes.
+
+- To make a script executable, use `chmod 755 1.0.0.sh` or `chmod +x 1.0.0.sh`.
+
 ### Gate 2: Variables
+
+`2.0.0.sh`
+```Bash
+#!/bin/sh
+
+printMessage="Hello from Bourne";
+echo printMessage
+```
 
 ### Gate 3: name
 
