@@ -1,4 +1,4 @@
 #!/bin/sh
 
-printMessage="Hello from Bourne";
-echo printMessage
+printMessage="Hello from Bourne"
+echo $printMessage
