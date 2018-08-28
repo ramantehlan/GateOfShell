@@ -74,7 +74,7 @@ printMessage="Hello from Bourne";
 echo printMessage
 ```
 
-- Variable name, "=" and value should not have space between them. This is because after space, shell see everything as a parameter.
+- Variable name, = and value should not have space between them. This is because after space, shell see everything as a parameter.
 
 - You can't assign multiple values to a variable, so without quote, printMessage won't have have the same value, and it might throw errors.
 
@@ -82,11 +82,15 @@ echo printMessage
 ```Bash
 #!/bin/sh
 
-echo "Hello, welcome to the shell!"
+echo "Hello $name, welcome to the shell!"
 echo "Let's start with your name?"
 read name
-echo "Nice to meet you $name!";
+echo "Nice to meet you $name!"
 ```
+
+- `read` command is used to set a variable by users.
+
+- Notice `$name` wasn't declared before using it in first echo, but used it won't throw a error, since you don't need to declare a variable before using it in Bourne Shell.
 
 
 
