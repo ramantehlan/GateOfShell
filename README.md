@@ -97,7 +97,7 @@ echo "Nice to meet you $name!"
 
 - Notice `$name` wasn't declared before using it in first echo, but used it won't throw a error, since you don't need to declare a variable before using it in Bourne Shell.
 
-**Export** 
+**Export and Source** 
 
 Variables can be used by other programs/scripts as well, but in order to do that, we must `export` them.
 
@@ -105,9 +105,26 @@ Variables can be used by other programs/scripts as well, but in order to do that
 root@123.332.23.271 ~/GateOfShell $ name="Prince"
 root@123.332.23.271 ~/GateOfShell $ export name
 root@123.332.23.271 ~/GateOfShell $ ./2.1.0.sh
+Hello Prince, welcome to the shell!
+Let's start with your name?
+Tony Stark
+Nice to meet you Tony Stark!
+root@123.332.23.271 ~/GateOfShell $ echo $name
+Prince
+root@123.332.23.271 ~/GateOfShell $ . ./2.1.0.sh
+Hello Prince, welcome to the shell!
+Let's start with your name?
+Tony Stark
+Nice to meet you Tony Stark!
+root@123.332.23.271 teOfShell $ echo $name
+Tony Stark
 ```
 
-Follow the commands above, and see the different in output this time. It will print `Hello Prince, welcome to the shell!` this time, earlier instead of 'Prince' it was blank. 
+Follow the commands above, and see the different in output this time. It will print `Hello Prince, welcome to the shell!` this time, earlier instead of 'Prince' it was blank, cause we imported the `$name` variable. 
+
+You will also notice, that once the script ends, the value of `$name` is back to the one we defined, even though we changed it in our script. This is because, once the script ends, its environment also ends, and the chances were only for that environment. Though, interactive shell keeps the value of `$name` variable, while it is still active.
+
+To keep the changes from the shell script, we need to *source* the script, which run the script in our interactive shell, and not create a new environment for our script. `.` [dot] command is used to source a script.
 
 
 
