@@ -36,9 +36,8 @@ You are expected to have some prior experience, following are some prerequisites
 
 ## Environment 
 
-To run a shell script you need to have following prerequisites:
+To work with a shell script you need to have following prerequisites:
 
-- A Unix/Linux machine. 
 - Bourne Shell (/bin/sh)
 - A Text Editor 
 
@@ -48,7 +47,7 @@ To run a shell script you need to have following prerequisites:
 ### Gate 1: Basics
 
 `1.0.0.sh`
-```Bash
+```bash
 #!/bin/sh
 
 # Comments start with a hash code 
@@ -64,10 +63,16 @@ echo Welcome to GateOfShell # You can even have in-line comments
 
 - To make a script executable, use `chmod 755 1.0.0.sh` or `chmod +x 1.0.0.sh`.
 
+- To execute a script write following command in terminal. 
+
+```console
+root@123.332.23.271 ~/GateOfShell $ ./1.0.0.sh
+```
+
 ### Gate 2: Variables
 
 `2.0.0.sh`
-```Bash
+```bash
 #!/bin/sh
 
 printMessage="Hello from Bourne";
@@ -79,7 +84,7 @@ echo printMessage
 - You can't assign multiple values to a variable, so without quote, printMessage won't have have the same value, and it might throw errors.
 
 `2.1.0.sh`
-```Bash
+```bash
 #!/bin/sh
 
 echo "Hello $name, welcome to the shell!"
@@ -91,6 +96,18 @@ echo "Nice to meet you $name!"
 - `read` command is used to set a variable by users.
 
 - Notice `$name` wasn't declared before using it in first echo, but used it won't throw a error, since you don't need to declare a variable before using it in Bourne Shell.
+
+**Export** 
+
+Variables can be used by other programs/scripts as well, but in order to do that, we must `export` them.
+
+```console
+root@123.332.23.271 ~/GateOfShell $ name="Prince"
+root@123.332.23.271 ~/GateOfShell $ export name
+root@123.332.23.271 ~/GateOfShell $ ./2.1.0.sh
+```
+
+Follow the commands above, and see the different in output this time. It will print `Hello Prince, welcome to the shell!` this time, earlier instead of 'Prince' it was blank. 
 
 
 
