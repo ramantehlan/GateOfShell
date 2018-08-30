@@ -132,6 +132,9 @@ root@123.332.23.271 teOfShell $ echo $name
 Tony Stark
 ```
 
+
+**Suffix and Prefix**
+
 To use suffix or prefix with our variable, `${VAR}` syntax is used.
 
 
