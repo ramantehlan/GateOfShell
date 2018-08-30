@@ -151,7 +151,11 @@ touch "./tmp/${name}_data"
 ```
 
 
-### Gate 3: name
+### Gate 3: Characters
+
+**Wildcards**
+
+You should be familiar with wildcards if you have even a little programming or Unix experience. Wildcard character `Asterisk (*), Question Mark (?), Exclamation Mark (!) etc` works as a placeholder to represent other characters, like numbers, strings etc.
 
 ## Contribution
     Feel free to contribute.
