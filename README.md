@@ -158,6 +158,9 @@ touch "./tmp/${name}_data"
 You should be familiar with wildcards if you have even a little programming or Unix experience. Wildcard character `Asterisk (*), Question Mark (?), Exclamation Mark (!) etc` works as a placeholder to represent other characters, like numbers, strings etc.
 
 ## Contribution
+
+	Author: [**Raman Tehlan**](https://ramantehlan.github.io/)
+
     Feel free to contribute.
 
 ## Resources
