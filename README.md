@@ -97,9 +97,11 @@ echo "Nice to meet you $name!"
 
 - Notice `$name` wasn't declared before using it in first echo, but used it won't throw a error, since you don't need to declare a variable before using it in Bourne Shell.
 
-**Export and Source** 
+**Export** 
 
 Variables can be used by other programs/scripts as well, but in order to do that, we must `export` them.
+
+Follow the commands above, and see the different in output this time. It will print `Hello Prince, welcome to the shell!` this time, earlier instead of 'Prince' it was blank, cause we imported the `$name` variable. 
 
 ```console
 root@123.332.23.271 ~/GateOfShell $ name="Prince"
@@ -111,6 +113,16 @@ Tony Stark
 Nice to meet you Tony Stark!
 root@123.332.23.271 ~/GateOfShell $ echo $name
 Prince
+```
+
+**Source**
+
+You will also notice, that once the script ends, the value of `$name` is back to the one we defined, even though we changed it in our script. This is because, once the script ends, its environment also ends, and the chances were only for that environment. Though, interactive shell keeps the value of `$name` variable, while it is still active.
+
+To keep the changes from the shell script, we need to *source* the script, which run the script in our interactive shell, and not create a new environment for our script. `.` [dot] command is used to source a script, by placing it before executing a script. This is the concept behind `dot files`.
+
+
+```console
 root@123.332.23.271 ~/GateOfShell $ . ./2.1.0.sh
 Hello Prince, welcome to the shell!
 Let's start with your name?
@@ -120,12 +132,20 @@ root@123.332.23.271 teOfShell $ echo $name
 Tony Stark
 ```
 
-Follow the commands above, and see the different in output this time. It will print `Hello Prince, welcome to the shell!` this time, earlier instead of 'Prince' it was blank, cause we imported the `$name` variable. 
+To use suffix or prefix with our variable, `${VAR}` syntax is used.
 
-You will also notice, that once the script ends, the value of `$name` is back to the one we defined, even though we changed it in our script. This is because, once the script ends, its environment also ends, and the chances were only for that environment. Though, interactive shell keeps the value of `$name` variable, while it is still active.
 
-To keep the changes from the shell script, we need to *source* the script, which run the script in our interactive shell, and not create a new environment for our script. `.` [dot] command is used to source a script.
+`2.1.1.sh`
+```bash
+#!/bin/sh
 
+
+echo "Hello $name, welcome to the shell!"
+echo "Let's start with your name?"
+read name
+echo "Nice to meet you $name! I will create a file for the name './tmp/${name}_data'"
+touch "./tmp/${name}_data"
+```
 
 
 ### Gate 3: name
