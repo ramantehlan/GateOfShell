@@ -157,6 +157,28 @@ touch "./tmp/${name}_data"
 
 You should be familiar with wildcards if you have even a little programming or Unix experience. Wildcard character `Asterisk (*), Question Mark (?), Exclamation Mark (!) etc` works as a placeholder to represent other characters, like numbers, strings etc.
 
+`3.0.0.sh`
+```bash
+#!/bin/sh
+
+echo "Using * we will list all the .md files:"
+ls *.md
+echo "Using * we will echo all files name:"
+echo *
+
+```
+
+**Escape Characters**
+
+Escape Character is similar to Wildcards, but they are particularly used for representing the characters, which are significant to the shell, like Double or Single Quotes, Round or Square Brackets etc.
+
+`3.1.0.sh`
+```bash
+#!/bin/sh
+
+echo "You can write \" or \\ or \$ and so on..."
+```
+
 ## Contribution
 
 	Author: [**Raman Tehlan**](https://ramantehlan.github.io/)
