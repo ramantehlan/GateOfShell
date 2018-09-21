@@ -179,11 +179,47 @@ Escape Character is similar to Wildcards, but they are particularly used for rep
 echo "You can write \" or \\ or \$ and so on..."
 ```
 
+### Gate 4: Loops
+
+Like most programming languages, shell also have loops concept. This helps you to repeat a task n times, 
+with out writing it n times. 
+
+**For**
+
+
+`4.0.0.sh`
+```bash
+#!/bin/sh
+
+for i in 1 2 3
+do 
+	echo "Current Number: $i" 
+done
+
+echo "-"
+
+for i in This is a loop writing something
+do
+	echo $i
+done
+
+echo "-"
+
+echo "Files list: "
+for i in *
+do
+  echo $i
+done
+```
+
+In bash, loop can have any value iterating. It can also list current directory, using Wildcards (\*).
+
+
 ## Contribution
 
-	Author: [**Raman Tehlan**](https://ramantehlan.github.io/)
+Author: [**Raman Tehlan**](https://ramantehlan.github.io/)
 
-    Feel free to contribute.
+Feel free to contribute.
 
 ## Resources
 - [Shell Scripting](https://en.wikipedia.org/wiki/Shell_script)
