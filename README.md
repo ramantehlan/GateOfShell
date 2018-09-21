@@ -216,6 +216,18 @@ In bash, loop can have any value iterating. It can also list current directory, 
 
 **While**
 
+`4.1.sh`
+```bash
+#!/bin/sh
+
+input_string="hello"
+while ["$input_string" != "bye"]
+do
+	echo "Please type something (bye to exit)"
+	read input_string
+	echo "You Typed: $input_string"
+done
+```
 
 
 ## Contribution
