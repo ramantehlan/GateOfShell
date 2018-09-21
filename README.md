@@ -46,7 +46,7 @@ To work with a shell script you need to have following prerequisites:
 
 ### Gate 1: Basics
 
-`1.0.0.sh`
+`1.0.sh`
 ```bash
 #!/bin/sh
 
@@ -71,7 +71,7 @@ root@123.332.23.271 ~/GateOfShell $ ./1.0.0.sh
 
 ### Gate 2: Variables
 
-`2.0.0.sh`
+`2.0.sh`
 ```bash
 #!/bin/sh
 
@@ -83,7 +83,7 @@ echo printMessage
 
 - You can't assign multiple values to a variable, so without quote, printMessage won't have have the same value, and it might throw errors.
 
-`2.1.0.sh`
+`2.1.sh`
 ```bash
 #!/bin/sh
 
@@ -138,7 +138,7 @@ Tony Stark
 To use suffix or prefix with our variable, `${VAR}` syntax is used.
 
 
-`2.1.1.sh`
+`2.2.sh`
 ```bash
 #!/bin/sh
 
@@ -157,7 +157,7 @@ touch "./tmp/${name}_data"
 
 You should be familiar with wildcards if you have even a little programming or Unix experience. Wildcard character `Asterisk (*), Question Mark (?), Exclamation Mark (!) etc` works as a placeholder to represent other characters, like numbers, strings etc.
 
-`3.0.0.sh`
+`3.0.sh`
 ```bash
 #!/bin/sh
 
@@ -172,7 +172,7 @@ echo *
 
 Escape Character is similar to Wildcards, but they are particularly used for representing the characters, which are significant to the shell, like Double or Single Quotes, Round or Square Brackets etc.
 
-`3.1.0.sh`
+`3.1.sh`
 ```bash
 #!/bin/sh
 
@@ -187,7 +187,7 @@ with out writing it n times.
 **For**
 
 
-`4.0.0.sh`
+`4.0.sh`
 ```bash
 #!/bin/sh
 
@@ -213,6 +213,9 @@ done
 ```
 
 In bash, loop can have any value iterating. It can also list current directory, using Wildcards (\*).
+
+**While**
+
 
 
 ## Contribution
